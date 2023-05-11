@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+body{
+    background-color: black;
+    margin-top:181px;
+    margin-left:300px;
+    max-width: 175vh;
+    min-height: 85vh;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap:0;
+}
+.container,.container-2,.container-3,.container-4,.container-5,.container-6{
+    padding: 0;
+    margin: 0;
+    width: 700px;
+    height: 500px;
+    perspective: 1000px;
+}
+.card{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1200ms;
+    transform-style: preserve-3d;
+    box-shadow: 10px 10px 10px rgba(30, 50, 40, 9);
+    border-radius: 2rem;
+}
+.card{
+    background-image: url(images/pic3.jpeg);
+}
+.container-2 .card{
+    background-image: url(images/pic2.jpeg);
+}
+.container-3 .card{
+    background-image: url(images/pic1.jpeg);
+}
+.container-4 .card{
+    background-image: url(images/pic4.jpeg);
+}
+.container-5 .card{
+    background-image: url(images/pic5.jpeg);
+}
+.container-6 .card{
+    background-image: url(images/pic6.jpeg);
+}
+
+
+
+.container:hover .card{
+    cursor: pointer;
+    transform: rotateY(180deg) rotateX(-10deg);
+}
+.container-2:hover .card{
+    cursor: pointer;
+    transform: rotateY(180deg) rotateX(-10deg);
+}
+.container-3:hover .card{
+    cursor: pointer;
+    transform: rotateY(180deg) rotateX(-10deg);
+}
+.container-4:hover .card{
+    cursor: pointer;
+    transform: rotateY(180deg) rotateX(-10deg);
+}.container-5:hover .card{
+    cursor: pointer;
+    transform: rotateY(180deg) rotateX(-10deg);
+}.container-6:hover .card{
+    cursor: pointer;
+    transform: rotateY(180deg) rotateX(-10deg);
+}
+
+.front,.back{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+.front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 0, .6);
+    background-blend-mode: lighten;
+    background-size: cover;
+    color: aliceblue;
+}
+.back{
+    background:rgba(0, 0, 0, .9);
+
+    background-size: cover;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.symb{  
+    font-size: 40px;
+    text-align: center;
+}
+
+.desc{
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    text-justify: newspaper;
+}
